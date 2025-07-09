@@ -1,3 +1,10 @@
+# Note
+
+This repository is a simplified version of https://github.com/a2aproject/a2a-samples focused on demonstrating MCP as an a2a agent registry. See [quickstart](./quickstart.md) for quickstart commands to run each component.  
+  
+Subscribe to The Build Podcast: https://www.youtube.com/channel/UCD1O1mlBGXBMXN-dmNfgDkg
+
+
 # Agent2Agent (A2A) Samples
 
 This repository contains code samples and demos which use the [Agent2Agent (A2A) Protocol](https://goo.gle/a2a).
