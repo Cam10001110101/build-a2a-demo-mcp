@@ -16,12 +16,12 @@ cd agents/a2a_mcp && uv run a2a-mcp --run mcp-server --transport sse
 
 # Start a2a Agents
 
-Orchestrator:
+Orchestrator Agent:
 ```
 cd agents/a2a_mcp && uv run src/a2a_mcp/agents/ --agent-card agent_cards/orchestrator_agent.json --port 10101
 ```
 
-Planner:
+Planner Agent:
 ```
 cd agents/a2a_mcp && uv run src/a2a_mcp/agents/ --agent-card agent_cards/planner_agent.json --port 10102
 ```
@@ -41,13 +41,12 @@ Car Rental Reservations Agent:
 cd agents/a2a_mcp && uv run src/a2a_mcp/agents/ --agent-card agent_cards/car_rental_agent.json --port 10105
 ```
 
-# Start a2a CLI
+# Start a2a CLI - Connect Orchestrator Agent
 
 CLI:
 ```
 cd hosts/cli && uv run . --agent http://localhost:10101
 ```
-
 
 # Start a2a Inspector
 
@@ -112,7 +111,7 @@ http://127.0.0.1:5001
 
 ### MCP Inspector
 ```
-http://localhost:6274/?MCP_PROXY_AUTH_TOKEN=ae6e064a03b03ed804675a43abc0775a3d0f0d30c658e285554bc4a2773e13c2#resources
+http://localhost:6274/?MCP_PROXY_AUTH_TOKEN=AUTO_GENERATED_TOKEN#resources
 ```
 ### Agent Chat UI
 
