@@ -666,12 +666,53 @@ export class OrchestratorAgent extends BaseAgent {
         };
       }
 
-      const result = await response.json();
-      return {
-        success: true,
-        content: JSON.stringify(result),
-        error: undefined
-      };
+      // Check if response is SSE format
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('text/event-stream')) {
+        // Handle SSE response - parse the data lines
+        const text = await response.text();
+        const lines = text.split('\n');
+        let lastData = null;
+        
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              // Look for the final message with the actual content
+              if (data.result && data.result.final && data.result.status && data.result.status.message) {
+                lastData = data.result.status.message.parts[0].text;
+              } else if (data.result && data.result.status && data.result.status.message) {
+                // Keep track of all messages in case there's no final one
+                lastData = data.result.status.message.parts[0].text;
+              }
+            } catch (e) {
+              console.error('Failed to parse SSE data line:', e);
+            }
+          }
+        }
+        
+        if (lastData) {
+          return {
+            success: true,
+            content: lastData,
+            error: undefined
+          };
+        } else {
+          return {
+            success: false,
+            content: '',
+            error: 'No valid response data found in SSE stream'
+          };
+        }
+      } else {
+        // Handle regular JSON response
+        const result = await response.json();
+        return {
+          success: true,
+          content: JSON.stringify(result),
+          error: undefined
+        };
+      }
     } catch (error) {
       return {
         success: false,
