@@ -14,3 +14,9 @@ wheels/
 .env
 
 **.cache
+
+# Claude-specific files
+.claude
+./docs
+./CLAUDE.md
+CLAUDE.md

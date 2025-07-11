@@ -1,0 +1,42 @@
+name = "a2a-agent-gateway"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Service bindings for agent workers
+[[services]]
+binding = "MCP_REGISTRY"
+service = "a2a-mcp-registry"
+
+[[services]]
+binding = "ORCHESTRATOR_AGENT"
+service = "a2a-orchestrator"
+
+[[services]]
+binding = "PLANNER_AGENT"
+service = "a2a-planner"
+
+[[services]]
+binding = "AIR_TICKETS_AGENT"
+service = "a2a-air-tickets"
+
+[[services]]
+binding = "HOTELS_AGENT"
+service = "a2a-hotels"
+
+[[services]]
+binding = "CAR_RENTAL_AGENT"
+service = "a2a-car-rental"
+
+# Durable Objects for session management
+[[durable_objects.bindings]]
+name = "SESSIONS"
+class_name = "AgentSession"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["AgentSession"]
+
+[vars]
+AUTH_SCHEME = "none"
+ENVIRONMENT = "development"

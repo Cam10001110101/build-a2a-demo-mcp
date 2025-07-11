@@ -1,0 +1,43 @@
+name = "a2a-mcp-registry"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "AGENT_CARDS"
+id = "32cdf80ff9174c20a52095a19e61274b"
+preview_id = "6a729faf21ff457590d41b2d872c7701"
+
+[[kv_namespaces]]
+binding = "EMBEDDINGS_CACHE"
+id = "90dc33d0ba4845cdb4d8f78ae43d6483"
+preview_id = "593f8ea1366442339f4627ce895c13a5"
+
+[[d1_databases]]
+binding = "TRAVEL_DB"
+database_name = "travel-db"
+database_id = "4d46bad8-fc6d-4e2d-a6c7-5593f59604a1"
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "agent.mcp-registry.demos.build"
+custom_domain = true
+
+# Rate limiting configuration
+[[unsafe.bindings]]
+name = "RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1"
+# Allows 100 requests per minute per client
+simple = { limit = 100, period = 60 }
+
+[vars]
+# Environment variables
+ENVIRONMENT = "development"
+AUTH_SCHEME = "none"
+REQUIRE_HTTPS = "false"

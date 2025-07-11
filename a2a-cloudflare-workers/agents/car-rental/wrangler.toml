@@ -1,0 +1,22 @@
+name = "a2a-car-rental"
+main = "src/index.ts"
+compatibility_date = "2024-11-20"
+
+[[kv_namespaces]]
+binding = "BOOKINGS"
+id = "daac7c09529c4adcb215282e3cb959ff"
+preview_id = "9a590daaedca48ef9da037d2723167a4"
+
+[ai]
+binding = "AI"
+
+[[services]]
+binding = "MCP_REGISTRY"
+service = "a2a-mcp-registry"
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "agent.car-rental.demos.build"
+custom_domain = true

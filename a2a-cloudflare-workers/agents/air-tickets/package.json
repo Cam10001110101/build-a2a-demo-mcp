@@ -1,0 +1,21 @@
+{
+  "name": "@a2a-workers/air-tickets",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "esbuild src/index.ts --bundle --format=esm --outfile=dist/index.js"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240620.0",
+    "@types/node": "^20.10.0",
+    "esbuild": "^0.19.8",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.78.2"
+  },
+  "dependencies": {
+    "@a2a-workers/shared": "file:../../shared"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "mcp-registry",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "create-kv": "wrangler kv:namespace create AGENT_CARDS && wrangler kv:namespace create EMBEDDINGS_CACHE",
+    "create-db": "wrangler d1 create travel-agency",
+    "db-init": "wrangler d1 execute travel-agency --local --file=./sql/schema.sql",
+    "db-seed": "wrangler d1 execute travel-agency --local --file=./sql/seed.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240620.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^3.60.0"
+  },
+  "dependencies": {
+    "@a2a-workers/shared": "file:../shared"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "namespaces": {
+    "mcp_registry": {
+      "AGENT_CARDS": {
+        "binding": "AGENT_CARDS",
+        "id": "32cdf80ff9174c20a52095a19e61274b",
+        "preview_id": "existing_preview_id_needed",
+        "note": "Already created"
+      },
+      "EMBEDDINGS": {
+        "binding": "EMBEDDINGS",
+        "id": "90dc33d0ba4845cdb4d8f78ae43d6483",
+        "preview_id": "593f8ea1366442339f4627ce895c13a5"
+      }
+    },
+    "orchestrator": {
+      "SESSIONS": {
+        "binding": "SESSIONS",
+        "id": "30b704a797c44285bbebd48450168cfe",
+        "preview_id": "e48a96092e124abca738de637fa1f019"
+      },
+      "WORKFLOWS": {
+        "binding": "WORKFLOWS",
+        "id": "0beca11ca7304af18f21cd7dc8d5a685",
+        "preview_id": "2af41ffd4e884dc2b309f46afb2566b7"
+      }
+    },
+    "booking_agents": {
+      "PLANNER_BOOKINGS": {
+        "binding": "PLANNER_BOOKINGS",
+        "id": "771cab81b4144c04a3a66ee129085f99",
+        "preview_id": "b8d99df932b84d688bb104fa029534d8"
+      },
+      "AIR_TICKETS_BOOKINGS": {
+        "binding": "AIR_TICKETS_BOOKINGS",
+        "id": "b320e1be38d849e2a2453c0e06c37e68",
+        "preview_id": "2743412349904df4bb14246cb7aacf80"
+      },
+      "HOTELS_BOOKINGS": {
+        "binding": "HOTELS_BOOKINGS",
+        "id": "de06a383a8ed440cbde8fa1d2ff6cb33",
+        "preview_id": "2fad8c0c15594bdf829e5baceaa0e8e6"
+      },
+      "CAR_RENTAL_BOOKINGS": {
+        "binding": "CAR_RENTAL_BOOKINGS",
+        "id": "daac7c09529c4adcb215282e3cb959ff",
+        "preview_id": "9a590daaedca48ef9da037d2723167a4"
+      }
+    }
+  },
+  "wrangler_config_examples": {
+    "mcp_registry": {
+      "kv_namespaces": [
+        {
+          "binding": "AGENT_CARDS",
+          "id": "32cdf80ff9174c20a52095a19e61274b"
+        },
+        {
+          "binding": "EMBEDDINGS",
+          "id": "90dc33d0ba4845cdb4d8f78ae43d6483",
+          "preview_id": "593f8ea1366442339f4627ce895c13a5"
+        }
+      ]
+    },
+    "orchestrator": {
+      "kv_namespaces": [
+        {
+          "binding": "SESSIONS",
+          "id": "30b704a797c44285bbebd48450168cfe",
+          "preview_id": "e48a96092e124abca738de637fa1f019"
+        },
+        {
+          "binding": "WORKFLOWS",
+          "id": "0beca11ca7304af18f21cd7dc8d5a685",
+          "preview_id": "2af41ffd4e884dc2b309f46afb2566b7"
+        }
+      ]
+    },
+    "planner": {
+      "kv_namespaces": [
+        {
+          "binding": "PLANNER_BOOKINGS",
+          "id": "771cab81b4144c04a3a66ee129085f99",
+          "preview_id": "b8d99df932b84d688bb104fa029534d8"
+        }
+      ]
+    },
+    "air_tickets": {
+      "kv_namespaces": [
+        {
+          "binding": "AIR_TICKETS_BOOKINGS",
+          "id": "b320e1be38d849e2a2453c0e06c37e68",
+          "preview_id": "2743412349904df4bb14246cb7aacf80"
+        }
+      ]
+    },
+    "hotels": {
+      "kv_namespaces": [
+        {
+          "binding": "HOTELS_BOOKINGS",
+          "id": "de06a383a8ed440cbde8fa1d2ff6cb33",
+          "preview_id": "2fad8c0c15594bdf829e5baceaa0e8e6"
+        }
+      ]
+    },
+    "car_rental": {
+      "kv_namespaces": [
+        {
+          "binding": "CAR_RENTAL_BOOKINGS",
+          "id": "daac7c09529c4adcb215282e3cb959ff",
+          "preview_id": "9a590daaedca48ef9da037d2723167a4"
+        }
+      ]
+    }
+  }
+}

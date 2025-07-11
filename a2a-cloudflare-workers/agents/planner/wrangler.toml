@@ -1,0 +1,26 @@
+name = "a2a-planner"
+main = "src/index.ts"
+compatibility_date = "2024-06-18"
+
+[env.production]
+name = "a2a-planner"
+
+[[kv_namespaces]]
+binding = "MEMORY"
+id = "771cab81b4144c04a3a66ee129085f99"
+preview_id = "b8d99df932b84d688bb104fa029534d8"
+
+[ai]
+binding = "AI"
+
+[[services]]
+binding = "MCP_REGISTRY"
+service = "a2a-mcp-registry"
+environment = "production"
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "agent.planner.demos.build"
+custom_domain = true

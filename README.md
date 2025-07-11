@@ -1,13 +1,35 @@
-# Note
+# Agent-to-Agent (A2A) with MCP Registry Demo
 
-This repository is a simplified version of https://github.com/a2aproject/a2a-samples focused on demonstrating MCP as an a2a agent registry. See [quickstart](./quickstart.md) for quickstart commands to run each component.  
-  
-Subscribe to The Build Podcast: https://www.youtube.com/channel/UCD1O1mlBGXBMXN-dmNfgDkg
+This repository demonstrates how to use the Model Context Protocol (MCP) as an agent registry for multi-agent travel planning. The system features **MCP 2025-06-18 compliance** with protocol version validation, session management, and modern transport capabilities.
+
+**🌟 Production Deployment**: Fully operational Cloudflare Workers deployment at `https://agent.*.demos.build`
+
+See [quickstart](./docs/quickstart.md) for setup and usage instructions.
+
+**🎥 Learn More**: Subscribe to The Build Podcast: https://www.youtube.com/channel/UCD1O1mlBGXBMXN-dmNfgDkg
 
 
-# Agent2Agent (A2A) Samples
+# Architecture Overview
 
-This repository contains code samples and demos which use the [Agent2Agent (A2A) Protocol](https://goo.gle/a2a).
+This repository contains two implementations:
+
+## 🚀 **Primary: Cloudflare Workers** (Production Ready)
+- **MCP 2025-06-18 compliant** registry with protocol version validation
+- Deployed on Cloudflare's edge network with custom domains
+- Multi-agent travel planning with vector-based agent discovery
+- Workers AI for embeddings, D1 for travel data, KV for agent cards
+
+## 🐍 **Alternative: Python** (Development/Testing)
+- Local development and testing implementation
+- Compatible with the A2A Protocol specification
+- Useful for experimentation and learning
+
+## Key Features
+- **Agent Discovery**: Vector similarity search using AI embeddings
+- **Travel Planning**: Multi-agent coordination for flights, hotels, car rentals
+- **MCP Compliance**: Full Model Context Protocol 2025-06-18 support
+- **Real-time Communication**: SSE transport for streaming responses
+- **Session Management**: Proper initialization and lifecycle handling
 
 ## Related Repositories
 
