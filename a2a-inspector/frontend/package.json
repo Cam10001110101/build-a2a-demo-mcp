@@ -19,7 +19,7 @@
   "dependencies": {
     "dompurify": "^3.2.6",
     "marked": "^15.0.12",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
     "@types/dompurify": "^3.0.5",
